@@ -1,0 +1,44 @@
+:root { --sbw: 16rem; }
+[dir="rtl"] body { font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif; }
+[dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+
+.scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+.scrollbar-dark::-webkit-scrollbar { width: 6px; }
+.scrollbar-dark::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 6px; }
+
+.nav-link.active { color: #0b6f63; background: #e8f7f4; }
+.tab-link.active { color: #1c2541; border-color: #0f9d8a; }
+
+/* Bars pinned to the bottom of the content column (not under the sidebar) */
+.dock-bottom { position: fixed; bottom: 0; inset-inline-end: 0; inset-inline-start: var(--sbw); z-index: 20; }
+
+/* Flow canvas */
+.canvas-bg {
+  background-color: #f7f9fc;
+  background-image: radial-gradient(#d5dbe6 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.wf-node { cursor: pointer; transition: box-shadow .15s; }
+.wf-node.selected { box-shadow: 0 0 0 2px #0f9d8a; }
+.wf-node.running { box-shadow: 0 0 0 3px #f59e0b; }
+.wf-node.done { box-shadow: 0 0 0 2px #10b981; }
+.wf-node.waiting { box-shadow: 0 0 0 3px #f59e0b; animation: pulse-wait 1.2s ease-in-out infinite; }
+.wf-node.failed { box-shadow: 0 0 0 3px #f43f5e; }
+@keyframes pulse-wait { 50% { box-shadow: 0 0 0 6px rgba(245,158,11,.35); } }
+
+/* Checkbox rendered as a switch (used by data-bound builder fields) */
+input.switch { appearance: none; position: relative; width: 36px; height: 20px; flex-shrink: 0; border-radius: 999px; background: #cbd5e1; cursor: pointer; transition: background .15s; }
+input.switch::after { content: ''; position: absolute; top: 2px; inset-inline-start: 2px; width: 16px; height: 16px; border-radius: 999px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: inset-inline-start .15s; }
+input.switch:checked { background: #0d8a79; }
+input.switch:checked::after { inset-inline-start: 18px; }
+
+.json-editor { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.5; }
+
+.fade-in { animation: fade .15s ease-out; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.drawer-panel { animation: slide .2s ease-out; }
+@keyframes slide { from { transform: translateX(24px); opacity: .6; } to { transform: none; opacity: 1; } }
+[dir="rtl"] .drawer-panel { animation-name: slide-rtl; }
+@keyframes slide-rtl { from { transform: translateX(-24px); opacity: .6; } to { transform: none; opacity: 1; } }

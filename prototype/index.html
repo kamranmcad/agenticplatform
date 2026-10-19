@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Gov · Agents Platform</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    // Horizon theme: navy structure, teal accent, coral for alerts, soft canvas
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', '"IBM Plex Sans Arabic"', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#e8f7f4', 100: '#c9ede6', 200: '#9adccf', 300: '#62c6b3', 400: '#2fae98', 500: '#0f9d8a', 600: '#0d8a79', 700: '#0b6f63', 800: '#0b5b52', 900: '#0a4a43' },
+            navy: { 50: '#eef1f8', 100: '#d9dfee', 200: '#b8c4de', 300: '#8fa3c7', 400: '#6b7fa8', 500: '#4b5f88', 600: '#36476d', 700: '#2a3858', 800: '#222e4b', 900: '#1c2541' },
+            canvas: '#f5f7fb'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="bg-canvas text-slate-800 antialiased">
+  <div id="app"></div>
+  <div id="overlay-root"></div>
+  <div id="toast-root" class="fixed bottom-4 end-4 z-[80] flex flex-col gap-2"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/hubs.js"></script>
+  <script src="js/pages/agents.js"></script>
+  <script src="js/pages/agent-builder.js"></script>
+  <script src="js/pages/build.js"></script>
+  <script src="js/pages/workflows.js"></script>
+  <script src="js/pages/knowledge.js"></script>
+  <script src="js/pages/integrations.js"></script>
+  <script src="js/pages/admin.js"></script>
+  <script src="js/pages/parked.js"></script>
+  <script src="js/shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Only the prototype is published; keep local material out of the repository
+_spec/
+_backup-before-rename/
+.claude/
+.netlify/
+Thumbs.db
+.DS_Store

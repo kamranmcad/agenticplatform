@@ -1,0 +1,11 @@
+# Static prototype: no build step, serve the prototype folder as-is.
+[build]
+  publish = "prototype"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
